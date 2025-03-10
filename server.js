@@ -133,12 +133,12 @@ app.post("/set-reminder", (req, res) => {
     }
 
     // Insert reminder into SQLite database
-    const query = `INSERT INTO reminders (time, message) VALUES (?, ?)`;
-    remaindersDB.run(query, [reminderTime.toISOString(), message], function (err) {
-        if (err) {
-            console.error("Error saving reminder:", err.message);
-            return res.status(500).json({ error: "Database error" });
-        }
+    // const query = `INSERT INTO reminders (time, message) VALUES (?, ?)`;
+    // remaindersDB.run(query, [reminderTime.toISOString(), message], function (err) {
+    //     if (err) {
+    //         console.error("Error saving reminder:", err.message);
+    //         return res.status(500).json({ error: "Database error" });
+    //     }
 
         setTimeout(() => {
             console.log('test')
