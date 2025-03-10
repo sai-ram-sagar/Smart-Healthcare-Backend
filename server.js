@@ -155,7 +155,7 @@ function sendNotification(message) {
             console.error("Error fetching subscriptions:", err.message);
             return;
         }
-
+console.log(rows)
         rows.forEach(sub => {
             try {
                 const subscription = {
