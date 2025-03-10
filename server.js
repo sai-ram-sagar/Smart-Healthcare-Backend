@@ -127,6 +127,7 @@ app.post("/set-reminder", (req, res) => {
     }
 
     const delay = reminderTime - new Date();
+    console.log(delay)
     if (delay <= 0) {
         return res.status(400).json({ error: "Time must be in the future" });
     }
@@ -140,6 +141,7 @@ app.post("/set-reminder", (req, res) => {
         }
 
         setTimeout(() => {
+            console.log('test')
             sendNotification(message);
         }, delay);
 
