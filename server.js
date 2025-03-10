@@ -162,7 +162,8 @@ function sendNotification(message) {
                     endpoint: sub.endpoint,
                     keys: JSON.parse(sub.keys) // Ensure it's valid JSON
                 };
-
+                console.log("Received Subscription:", subscription);
+                
                 webPush.sendNotification(subscription, message)
                     .catch(err => console.error("Push Notification Error:", err));
 
