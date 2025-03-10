@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
     origin: 'https://thunderous-moonbeam-b22b24.netlify.app', // Change '*' to your frontend URL for security
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+     credentials: true
   }));
   
 app.use(bodyParser.json());
